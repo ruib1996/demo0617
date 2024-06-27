@@ -1,0 +1,37 @@
+ftpconfig:
+  #解调器ftp相关配置
+  demodftpconfig:
+    # IP
+    server: 192.168.21.138
+    # 端口号
+    port: 21
+    # ftp用户名
+    user: admin
+    # ftp密码
+    pwd: admin
+    # 用户主目录
+    destDir: /
+    # 下载到本地目录
+    localDir: /
+    # 轮询监听时间（ms）
+    sleep: 5000
+    # FTP模式（主动/被动）
+    mode: PASV
+  #接收计划ftp相关配置
+  recvplanftpconfig:
+    # IP
+    server: 192.168.21.138
+    # 端口号
+    port: 21
+    # ftp用户名
+    user: admin
+    # ftp密码
+    pwd: admin
+    # 用户主目录
+    destDir: /RecvPlan/
+    # 下载到本地目录
+    localDir: /RecvPlan/
+    # 轮询监听时间（ms）
+    sleep: 5000
+    # FTP模式（主动ACTV/被动PASV）
+    mode: PASV
