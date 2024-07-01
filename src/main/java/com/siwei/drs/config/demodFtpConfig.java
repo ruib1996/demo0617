@@ -3,6 +3,7 @@ package com.siwei.drs.config;
 import com.siwei.drs.utils.ymlReaderUtils;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.Map;
 @Getter
 @Setter
 @Component
+@ConfigurationProperties(prefix = "demodftpconfig")
 public class demodFtpConfig {
     private static final String filePath = "src/main/resources/ftpConfig.yml";
     /**
@@ -73,12 +75,10 @@ public class demodFtpConfig {
         this.mode = (String) ftpConfig.get("mode");
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         var clockStart = System.currentTimeMillis();
         demodFtpConfig demodFtpConfig = new demodFtpConfig();
         System.out.println(demodFtpConfig.server);
         System.err.format("Took %,d ms\n", System.currentTimeMillis() - clockStart);
-
     }
-
 }

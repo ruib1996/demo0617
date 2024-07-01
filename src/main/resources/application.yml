@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: demo0617
+  virtual-thread: true

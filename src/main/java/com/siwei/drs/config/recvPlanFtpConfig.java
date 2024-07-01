@@ -78,11 +78,10 @@ public class recvPlanFtpConfig {
         this.mode = (String) ftpConfig.get("mode");
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         var clockStart = System.currentTimeMillis();
         recvPlanFtpConfig recvPlanFtpConfig = new recvPlanFtpConfig();
         System.out.println(recvPlanFtpConfig.server);
         System.err.format("Took %,d ms\n", System.currentTimeMillis() - clockStart);
-
     }
 }

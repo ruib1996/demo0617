@@ -1,0 +1,26 @@
+# -------------------------------------------------------------
+# ----- Setting File with UTF8-----
+# ----- Xpath解析接收计划XML文件 -----
+# -------------------------------------------------------------
+
+# 用于文件头信息获取
+[FileHeader]
+    MessageType = /interfaceFile/FileHeader[1]/MessageType[1]/text()
+
+# 用于recvPlanEntity计划表的数据获取
+[FileBody]
+    PlanID = /interfaceFile/FileBody[1]/PlanID[1]/text()
+    SatelliteID = /interfaceFile/FileBody[1]/SatelliteID[1]/text()
+
+# 用于recvPlanEntity计划表的任务数据获取
+[RecvTask]
+    # 还有PlanID字段header中已经获取，这里不需要再获取
+    RecvID = /interfaceFile/FileBody[1]/RecvTaskList[1]/RecvTask[1]/RecvID[1]/text()
+    OrbitID = /interfaceFile/FileBody[1]/RecvTaskList[1]/RecvTask[1]/OrbitID[1]/text()
+    SatArriveTime = /interfaceFile/FileBody[1]/RecvTaskList[1]/RecvTask[1]/SatArriveTime[1]/text()
+    SatLeaveTime = /interfaceFile/FileBody[1]/RecvTaskList[1]/RecvTask[1]/SatLeaveTime[1]/text()
+    DataRecBeginTime = /interfaceFile/FileBody[1]/RecvTaskList[1]/RecvTask[1]/DataRecBeginTime[1]/text()
+    DataRecEndTime = /interfaceFile/FileBody[1]/RecvTaskList[1]/RecvTask[1]/DataRecEndTime[1]/text()
+    DownloadSpeed = /interfaceFile/FileBody[1]/RecvTaskList[1]/RecvTask[1]/DownloadSpeed[1]/text()
+    ChannelID = /interfaceFile/FileBody[1]/RecvTaskList[1]/RecvTask[1]/ChannelID[1]/text()
+

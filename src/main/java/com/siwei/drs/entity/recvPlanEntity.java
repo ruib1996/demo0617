@@ -19,11 +19,11 @@ import lombok.Setter;
 public class recvPlanEntity {
 
     // 计划编号，9位定长
-    @Column(name = "PlanID")
+    @Column(name = "PlanID", nullable = false)
     private int planID;
 
     // 卫星代号
-    @Column(name = "SatelliteID")
+    @Column(name = "SatelliteID", nullable = false)
     private String satelliteID;
 
     // 数据创建时间

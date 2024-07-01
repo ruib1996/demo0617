@@ -1,0 +1,52 @@
+# -------------------------------------------------------------
+# ----- Setting File with UTF8-----
+# ----- 传输软件配置文件 -----
+# -------------------------------------------------------------
+
+[postgresqlconfig]
+    # 自定义数据源设置文件，这个文件会针对当前分组生效，用于给当前分组配置单独的数据库连接池参数，没有则使用全局的配置
+    ds.setting.path =
+    #数据库驱动名，如果不指定，则会根据url自动判定
+    driver = org.postgresql.Driver
+    #JDBC url，必须
+    url = jdbc:postgresql://localhost:5432/postgres
+    #用户名，必须
+    user = admin
+    #密码，必须，如果密码为空，请填写 pass =
+    pass = admin
+
+[demodftpconfig]
+    # IP
+    server= 192.168.21.138
+    # 端口号
+    port= 21
+    # ftp用户名
+    user= admin
+    # ftp密码
+    pwd= admin
+    # 用户主目录
+    destDir= /
+    # 下载到本地目录
+    localDir= /
+    # 轮询监听时间（ms）
+    sleep= 5000
+    # FTP模式（主动/被动）
+    mode= PASV
+
+[recvplanftpconfig]
+    # IP
+    server= 192.168.21.138
+    # 端口号
+    port= 21
+    # ftp用户名
+    user= admin
+    # ftp密码
+    pwd= admin
+    # 用户主目录
+    destDir= /RecvPlan/
+    # 下载到本地目录
+    localDir= /RecvPlan/
+    # 轮询监听时间（ms）
+    sleep= 5000
+    # FTP模式（主动/被动）
+    mode= PASV
